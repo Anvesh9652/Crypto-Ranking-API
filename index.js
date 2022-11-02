@@ -1,10 +1,9 @@
 const express = require("express");
 const cheeiro = require("cheerio");
 const axios = require("axios");
-const puppeteer = require("puppeteer");
 const app = express();
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const url = "https://www.coingecko.com/";
 
 
@@ -164,4 +163,4 @@ app.get("/news", (req, res) => {
   getNewsData();
 });
 
-app.listen(port, () => console.log(`server running on ${port}`));
+app.listen(PORT, () => console.log(`server running on ${PORT}`));
